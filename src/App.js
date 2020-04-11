@@ -5,44 +5,14 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
-
-export class Dupa extends Component {
-  render() {
-    return (
-      <div>
-        DUPA
-      </div>
-    )
-  }
-}
-
-export class Pipa extends Component {
-  constructor(props){
-    super(props)
-
-    this.state={
-      flag:true
-    }
-  }
-  render() {
-    console.log(this.props)
-    return (
-      <div>
-        PIPA {this.props.title}
-      </div>
-    )
-  }
-}
-
-
-
+import ShopPage from './pages/shop/shop'
 
 function App() {
   return (
     <div>
     <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
